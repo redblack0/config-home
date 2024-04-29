@@ -1,0 +1,11 @@
+# Editor to use
+default: hx
+
+# Use vim-like keybindings
+match_vim_exit_behavior: true
+
+exec:
+  firefox:
+    [pdf]
+  'feh -.':
+    [jpg, jpeg, png, gif, svg, hdr]
