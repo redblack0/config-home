@@ -89,38 +89,50 @@
       enable = true;
       package = pkgs.vscode.fhs;
       # package = pkgs.vscodium;
-      extensions = with pkgs.vscode-extensions; [
-        christian-kohler.path-intellisense
-        mkhl.direnv
-        ms-vscode-remote.remote-containers
-        ms-vscode-remote.remote-ssh
-        ms-vscode.live-server
-        ms-vsliveshare.vsliveshare
-        zhuangtongfa.material-theme
+      extensions = with pkgs.vscode-extensions;
+        [
+          christian-kohler.path-intellisense
+          mkhl.direnv
+          ms-vscode-remote.remote-containers
+          ms-vscode-remote.remote-ssh
+          ms-vscode.live-server
+          ms-vsliveshare.vsliveshare
+          zhuangtongfa.material-theme
 
-        ecmel.vscode-html-css
-        golang.go
-        haskell.haskell
-        jnoortheen.nix-ide
-        mads-hartmann.bash-ide-vscode
-        ms-azuretools.vscode-docker
-        ms-python.python
-        ms-python.vscode-pylance
-        ms-toolsai.jupyter
-        ms-toolsai.jupyter-renderers
-        ms-toolsai.vscode-jupyter-cell-tags
-        ms-toolsai.vscode-jupyter-slideshow
-        ms-vscode.cmake-tools
-        ms-vscode.cpptools
-        njpwerner.autodocstring
-        nvarner.typst-lsp
-        ocamllabs.ocaml-platform
-        rust-lang.rust-analyzer
-        serayuzgur.crates
-        tamasfe.even-better-toml
-        yzhang.markdown-all-in-one
-        ziglang.vscode-zig
-      ];
+          github.copilot
+          redhat.java
+
+          ecmel.vscode-html-css
+          golang.go
+          haskell.haskell
+          jnoortheen.nix-ide
+          mads-hartmann.bash-ide-vscode
+          ms-azuretools.vscode-docker
+          ms-python.python
+          ms-python.vscode-pylance
+          ms-toolsai.jupyter
+          ms-toolsai.jupyter-renderers
+          ms-toolsai.vscode-jupyter-cell-tags
+          ms-toolsai.vscode-jupyter-slideshow
+          ms-vscode.cmake-tools
+          ms-vscode.cpptools
+          njpwerner.autodocstring
+          nvarner.typst-lsp
+          ocamllabs.ocaml-platform
+          rust-lang.rust-analyzer
+          serayuzgur.crates
+          tamasfe.even-better-toml
+          yzhang.markdown-all-in-one
+          ziglang.vscode-zig
+        ]
+        ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+          {
+            name = "volar";
+            publisher = "Vue";
+            version = "1.8.27";
+            sha256 = "KfWgdz61NURmS1cwFsE9AmIrEykyN5MXIKfG8gDfmac=";
+          }
+        ];
       mutableExtensionsDir = true;
       userSettings =
         (builtins.fromJSON (builtins.readFile ./settings/vscode.json))
