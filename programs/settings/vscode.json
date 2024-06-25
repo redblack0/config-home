@@ -23,5 +23,6 @@
   "workbench.colorCustomizations": {
     "editorRuler.foreground": "#ff4081"
   },
-  "python.languageServer": "Default"
+  "python.languageServer": "Default",
+  "java.format.settings.profile": "GoogleStyle"
 }
