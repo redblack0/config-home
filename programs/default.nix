@@ -1,24 +1,11 @@
 {pkgs, ...}: {
   home = {
     packages = with pkgs; [
-      # fx file manager
       bat
       chafa
       feh
-      felix-fm
       zoxide
     ];
-
-    file = {
-      ".config/felix/config.yaml" = {
-        enable = true;
-        source = ./settings/fx-settings.yaml;
-      };
-    };
-
-    # shellAliases = {
-    #   code = "codium";
-    # };
   };
 
   programs = {
