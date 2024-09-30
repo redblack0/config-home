@@ -30,7 +30,7 @@
         config.allowUnfree = true;
       };
       username = "nickgrunert";
-      stateVersion = "23.11";
+      stateVersion = "24.05";
     in {
       formatter = pkgs.alejandra;
       packages.homeConfigurations = {

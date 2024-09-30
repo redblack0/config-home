@@ -118,7 +118,6 @@
           ms-vscode.cpptools
           njpwerner.autodocstring
           nvarner.typst-lsp
-          ocamllabs.ocaml-platform
           rust-lang.rust-analyzer
           serayuzgur.crates
           tamasfe.even-better-toml
