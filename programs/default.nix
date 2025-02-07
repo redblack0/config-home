@@ -38,6 +38,7 @@
 
     git = {
       enable = true;
+      lfs.enable = true;
       userName = "Nick Grunert";
       userEmail = "nick.marlon.grunert@gmail.com";
       signing.key = "";
