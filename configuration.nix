@@ -48,7 +48,7 @@
       rust-analyzer
       swiProlog
       taplo
-      typst-lsp
+      tinymist
       yaml-language-server
       zls
     ];

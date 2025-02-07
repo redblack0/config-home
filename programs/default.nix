@@ -105,7 +105,7 @@
           ms-vscode.cmake-tools
           ms-vscode.cpptools
           njpwerner.autodocstring
-          nvarner.typst-lsp
+          myriad-dreamin.tinymist
           rust-lang.rust-analyzer
           serayuzgur.crates
           tamasfe.even-better-toml
